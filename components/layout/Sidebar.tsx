@@ -1,10 +1,12 @@
 import { menuItems } from "@/constants";
 import Link from "next/link";
+import ActiveLink from "../common/ActiveLink";
+import { TMenuItem } from "@/types";
 
 export default function Sidebar() {
   return (
-    <div className="p-5 border-r border-r-gray-200">
-      <Link href="/" className="font-bold text-3xl mb-4">
+    <div className="border-r border-r-gray-200 p-5">
+      <Link href="/" className="mb-5 text-3xl font-bold">
         Educamy
       </Link>
       <ul>
@@ -16,25 +18,13 @@ export default function Sidebar() {
   );
 }
 
-function MenuItem({
-  url,
-  title,
-  icon,
-}: {
-  url: string;
-  title: string;
-  icon?: React.ReactNode;
-}) {
+function MenuItem({ url, title, icon }: TMenuItem) {
   return (
     <li>
-      <Link
-        href={url}
-        className="p-3 rounded-md flex items-center gap-2 hover:text-primary hover:bg-primary/10 transition-all"
-      >
-        {" "}
+      <ActiveLink url={url}>
         {icon}
         {title}
-      </Link>
+      </ActiveLink>
     </li>
   );
 }
