@@ -7,11 +7,9 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="wrapper grid h-screen grid-cols-[300px_1fr]">
+    <div className="wrapper grid h-screen w-full grid-cols-[300px_1fr]">
       <Sidebar />
-      <div className="flex items-center justify-center">
-        <main>{children}</main>
-      </div>
+      <main className="p-5">{children}</main>
     </div>
   );
 }

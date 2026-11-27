@@ -7,7 +7,7 @@ import { Suspense } from "react";
 export default function Sidebar() {
   return (
     <Suspense fallback={<div className="w-75" />}>
-      <div className="border-r border-r-gray-200 px-4 py-2">
+      <div className="border-r border-r-gray-200 bg-white px-4 py-2">
         <Link href="/" className="mb-5 text-3xl font-bold">
           Educamy
         </Link>
