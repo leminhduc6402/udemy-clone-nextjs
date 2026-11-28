@@ -4,7 +4,9 @@ import { Suspense } from "react";
 export default function Page() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <SignIn />
+      <div className="flex h-screen items-center justify-center">
+        <SignIn />
+      </div>
     </Suspense>
   );
 }
